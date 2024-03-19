@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RecipeCard from "../recipe/RecipeCard";
 import RECIPES from "../../json/BurmeseRecipes.json";
 import { Pagination } from "flowbite-react";
+import { ScaleLoader } from "react-spinners";
 
 const Trending = () => {
   const feature = RECIPES;
@@ -14,8 +15,13 @@ const Trending = () => {
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
   const currentRecipes = RECIPES.slice(indexOfFirstRecipe, indexOfLastRecipe);
+
   const paginate = (page) => {
+    setLoading(true);
     setCurrentPage(page);
+    setTimeout(() => {
+      setLoading(false)
+    }, 500)
   };
 
   useEffect(() => {
@@ -33,8 +39,13 @@ const Trending = () => {
             <span className=" text-[#FB7E0B]"> Recipes</span>
           </h1>
       </div>
+      {loading && (
+        <div className="flex justify-center mt-[10%] min-h-[50vh]">
+          <ScaleLoader color="#ff9900" />
+        </div>
+      )}
       <div className="md:flex flex-wrap gap-5">
-        {feature &&
+        {!loading && feature &&
           feature.length > 0 &&
           currentRecipes.map((recipe, i) => <RecipeCard recipe={recipe} key={i} />)}
       </div>
