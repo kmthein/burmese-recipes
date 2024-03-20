@@ -14,8 +14,7 @@ const Main = () => {
       <Outlet />
       <ScrollToTop
         smooth
-        className=" pl-[6px] bg-[#FB7E0B] hover:bg-[#fb7f0bdc] hover:-translate-y-1"
-        color="white"
+        className=" pl-[6px] hover:bg-[#f0f0f0dc] hover:-translate-y-1"
       />
       <Foot />
     </>
