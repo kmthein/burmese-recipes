@@ -3,11 +3,14 @@ import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import Foot from "../components/Foot";
 import ScrollToTop from "react-scroll-to-top";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
   return (
     <>
       <Navbar />
+      <ToastContainer />
       <Outlet />
       <ScrollToTop
         smooth

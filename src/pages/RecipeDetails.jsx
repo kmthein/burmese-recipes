@@ -47,12 +47,12 @@ const RecipeDetails = () => {
             />
           </div>
           <div className="mt-6 xl:flex gap-20">
-            <div className=" xl:w-[35%]">
+            <div className=" 2xl:w-[35%]">
               <img
                 src={`/img/${recipe?.Name}.jpg`}
                 onError={(e) => e.target.src = imgNotFound}
                 alt=""
-                className=" w-full xl:h-[600px] object-cover object-center"
+                className=" w-full 2xl:h-[600px] object-cover object-center"
               />
               <div className=" mt-8 leading-7">
                 <p>{recipe?.description}</p>
@@ -76,7 +76,7 @@ const RecipeDetails = () => {
               </div>
             </div>
             <div>
-            <div className="mt-8 xl:mt-20 hidden xl:block">
+            <div className="mt-8 xl:mt-16 hidden xl:block">
                 <h5 className="mb-1 text-xl font-semibold">Ingredients</h5>
                 <pre className=" leading-loose">{recipe?.Ingredients}</pre>
               </div>
