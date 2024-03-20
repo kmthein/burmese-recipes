@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
     <div className="px-[3%] xl:px-[5%] py-4 mx-auto relative z-50 2xl:min-h-screen mb-20 2xl:mb-0">
-        <div className=" mt-[100px] 2xl:mt-[250px]">
+        <div className=" mt-[200px] md:mt-[100px] 2xl:mt-[250px]">
           <h1 className=" text-[32px] xl:text-[45px] 2xl:text-[56px] font-bold text-center md:text-left">
             Welcome to the World <br /> of{" "}
             <span className=" text-[#FB7E0B]">Myanmar</span> Recipe
@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
       </div>
       <svg
-        className=" absolute right-0 top-[-10px] md:top-[-10px] xl:top-0 z-10 w-[240px] md:w-[55%] xl:h-[600px] 2xl:h-[833px]"
+        className=" absolute right-0 top-[-10px] md:top-[-10px] xl:top-0 z-10 w-[50%] md:w-[55%] xl:h-[600px] 2xl:h-[833px]"
         viewBox="0 0 813 733"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
